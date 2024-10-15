@@ -1,4 +1,5 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/The-Nefarious-Developer/devcontainer-templates/tree/main/src/sap-cap-javascript-node
 {
 	"name": "CAP",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
