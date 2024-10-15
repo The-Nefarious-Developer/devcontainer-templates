@@ -54,7 +54,7 @@ jobs:
                 fi
 
                 # Execute test for the default variant of that template
-                VARIANT="$option_value" test/${{ matrix.template }}/test.sh
+                VARIANT="$option_value" ../test/${{ matrix.template }}/test.sh
               done
             fi
           fi
