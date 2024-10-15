@@ -3,11 +3,13 @@ on:
   pull_request:
 
 jobs:
+
   detect-changes:
     runs-on: ubuntu-latest
     outputs:
       templates: ${{ steps.filter.outputs.changes }}
     steps:
+      
       - uses: dorny/paths-filter@v2
         id: filter
         with:
@@ -22,6 +24,7 @@ jobs:
       matrix:
         template: ${{ fromJSON(needs.detect-changes.outputs.templates) }}
     steps:
+
       - uses: actions/checkout@v2
 
       - name: "Install latest devcontainer CLI"
