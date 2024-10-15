@@ -45,17 +45,20 @@ jobs:
               echo "(!) Configuring template options within 'src/${{ matrix.templates }}' folder"
               for option in "${options[@]}"
               do
-                option_key="\${templateOption:$option}"
-                option_value=$(jq -r ".options | .${option} | .default" devcontainer-template.json)
+                echo $option
+                echo "$option"
+                echo option
+                # option_key="\${templateOption:$option}"
+                # option_value=$(jq -r ".options | .${option} | .default" devcontainer-template.json)
 
-                if [ "${option_value}" = "" ] || [ "${option_value}" = "null" ] ; then
-                  echo "Template '${{ matrix.templates }}' is missing a default value for option '${option}'"
-                  exit 1
-                fi
+                # if [ "${option_value}" = "" ] || [ "${option_value}" = "null" ] ; then
+                #   echo "Template '${{ matrix.templates }}' is missing a default value for option '${option}'"
+                #   exit 1
+                # fi
 
-                echo "(!) Replacing '${option_key}' with '${option_value}'"
-                option_value_escaped=$(sed -e 's/[]\/$*.^[]/\\&/g' <<<"${option_value}")
-                find ./ -type f -print0 | xargs -0 sed -i "s/${option_key}/${option_value_escaped}/g"
+                # echo "(!) Replacing '${option_key}' with '${option_value}'"
+                # option_value_escaped=$(sed -e 's/[]\/$*.^[]/\\&/g' <<<"${option_value}")
+                # find ./ -type f -print0 | xargs -0 sed -i "s/${option_key}/${option_value_escaped}/g"
               done
             fi
           fi
