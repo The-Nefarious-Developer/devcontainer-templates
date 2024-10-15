@@ -1,0 +1,48 @@
+{
+    "name": "devcontainer-templates",
+    "version": "1.0.0",
+    "description": "Nefarious Development Container Templates",
+    "author": "Nicholas Checan",
+    "license": "MIT",
+    "homepage": "https://github.com/The-Nefarious-Developer/devcontainer-temmplates#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/The-Nefarious-Developer/devcontainer-templates.git"
+    },
+    "bugs": {
+        "url": "https://github.com/The-Nefarious-Developer/devcontainer-templates/issues"
+    },
+    "devDependencies": {
+        "@devcontainers/cli": "^0.71.0",
+        "@semantic-release/changelog": "^6.0.3",
+        "@semantic-release/commit-analyzer": "^13.0.0",
+        "@semantic-release/github": "^11.0.0",
+        "@semantic-release/release-notes-generator": "^14.0.1",
+        "semantic-release": "^24.1.2"
+    },
+    "release": {
+        "branches": [ "main" ],
+        "plugins": [
+            "@semantic-release/commit-analyzer",
+            "@semantic-release/release-notes-generator",
+            "@semantic-release/changelog",
+            [
+                "@semantic-release/github",
+                {
+                    "assets": [
+                        {
+                            "path": "CHANGELOG.md",
+                            "label": "Changelog"
+                        }
+                    ]
+                }
+            ]
+        ]
+    },
+    "scripts": {
+        "build": "scripts/build.sh",
+        "semantic-release": "semantic-release",
+        "test:semantic-release": "semantic-release --dry-run --debug",
+        "test:local": "VARIANT=22-bookworm test/sap-cap-javascript-node/test.sh"
+    }
+}
