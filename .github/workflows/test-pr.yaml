@@ -20,20 +20,20 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
-        templates: ${{ fromJSON(needs.detect-changes.outputs.templates) }}
+        template: ${{ fromJSON(needs.detect-changes.outputs.templates) }}
     steps:
       - uses: actions/checkout@v2
 
       - name: "Install latest devcontainer CLI"
         run: npm install -g @devcontainers/cli
 
-      - name: "Generating tests for '${{ matrix.templates }}'"
-        run: echo "${{ matrix.templates }}"
+      - name: "Generating tests for '${{ matrix.template }}'"
+        run: echo "${{ matrix.template }}"
 
-      - name: Configure template
+      - name: "Run smoke tests for '${{ matrix.template }}'"
         run: |
           set -e
-          cd src/${{ matrix.templates }}
+          cd src/${{ matrix.template }}
 
           # Configure templates only if `devcontainer-template.json` contains the `options` property.
           optionProp=( $(jq -r '.options' devcontainer-template.json) )
@@ -42,23 +42,19 @@ jobs:
             options=( $(jq -r '.options | keys[]' devcontainer-template.json) )
 
             if [ "${options[0]}" != "" ] && [ "${options[0]}" != "null" ] ; then
-              echo "(!) Configuring template options within 'src/${{ matrix.templates }}' folder"
+              echo "(!) Configuring template options within 'src/${{ matrix.template }}' folder"
               for option in "${options[@]}"
               do
-                echo $option
-                echo "$option"
-                echo option
-                # option_key="\${templateOption:$option}"
-                # option_value=$(jq -r ".options | .${option} | .default" devcontainer-template.json)
+                option_key="\${templateOption:$option}"
+                option_value=$(jq -r ".options | .${option} | .default" devcontainer-template.json)
 
-                # if [ "${option_value}" = "" ] || [ "${option_value}" = "null" ] ; then
-                #   echo "Template '${{ matrix.templates }}' is missing a default value for option '${option}'"
-                #   exit 1
-                # fi
+                if [ "${option_value}" = "" ] || [ "${option_value}" = "null" ] ; then
+                  echo "Template '${{ matrix.template }}' is missing a default value for option '${option}'"
+                  exit 1
+                fi
 
-                # echo "(!) Replacing '${option_key}' with '${option_value}'"
-                # option_value_escaped=$(sed -e 's/[]\/$*.^[]/\\&/g' <<<"${option_value}")
-                # find ./ -type f -print0 | xargs -0 sed -i "s/${option_key}/${option_value_escaped}/g"
+                # Execute test for the default variant of that template
+                VARIANT="$option_value" test/${{ matrix.template }}/test.sh
               done
             fi
           fi
