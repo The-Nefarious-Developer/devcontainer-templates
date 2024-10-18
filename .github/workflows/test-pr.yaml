@@ -48,6 +48,7 @@ jobs:
               echo "(!) Configuring template options within 'src/${{ matrix.template }}' folder"
               for option in "${options[@]}"
               do
+                # Get default variant for current template
                 option_key="\${templateOption:$option}"
                 option_value=$(jq -r ".options | .${option} | .default" devcontainer-template.json)
 

@@ -1,9 +1,11 @@
 {
-    "id": "javascript-node",
+    "id": "sap-cap-javascript-node",
     "version": "1.0.0",
     "name": "SAP CAP",
-    "description": "Develop CAP based projects for the SAP BTP Cloud Foundry runtime.",    
+    "description": "Develop CAP based projects for the SAP BTP Cloud Foundry runtime.",
+    "documentationURL": "https://github.com/The-Nefarious-Developer/devcontainer-templates/tree/main/src/sap-cap-javascript-node",
     "publisher": "The Nefarious Developer",
+    "licenseURL": "https://github.com/The-Nefarious-Developer/devcontainer-templates/blob/main/LICENSE",
     "options": {
         "imageVariant": {
             "type": "string",
