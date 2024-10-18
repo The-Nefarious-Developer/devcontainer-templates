@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write  # Ensure the GitHub Actions bot has write access
+
 jobs:
   deploy:
     if: ${{ github.ref == 'refs/heads/main' }}
@@ -18,6 +21,7 @@ jobs:
       - name: "Publish"
         uses: devcontainers/action@v1
         with:
+          templates-namespace: "devcontainers"
           publish-templates: "true"
           base-path-to-templates: "./src"
         env:
