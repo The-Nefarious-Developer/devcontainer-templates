@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       packages: write
+      contents: write
+      pull-requests: write
     steps:
       
       - uses: actions/checkout@v3
@@ -21,7 +23,7 @@ jobs:
       - name: "Publish"
         uses: devcontainers/action@v1
         with:
-          # templates-namespace: "the-nefarious-developer/devcontainers"
+          templates-namespace: "the-nefarious-developer/devcontainers"
           publish-templates: "true"
           base-path-to-templates: "./src"
         env:
