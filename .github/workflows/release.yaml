@@ -25,10 +25,6 @@ jobs:
           generate-docs: "true"
         env:
           GITHUB_TOKEN: ${{ secrets.NEFARIOUS_TOKEN }}
-      
-      # Add repo tag as the devcontainer action does not automatically link the template with the repository
-      - name: Repo tag
-        run: 
         
   release:
     name: Generate release
