@@ -28,5 +28,11 @@
         "SAP",
         "BTP",
         "CloudFoundry"
+    ],
+    "keywords": [
+        "SAP",
+        "CAP",
+        "BTP",
+        "CloudFoundry"
     ]
 }
