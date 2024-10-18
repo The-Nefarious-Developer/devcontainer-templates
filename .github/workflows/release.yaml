@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write  # Ensure the GitHub Actions bot has write access
+
 jobs:
   deploy:
     if: ${{ github.ref == 'refs/heads/main' }}
