@@ -21,7 +21,7 @@ jobs:
       - name: "Publish"
         uses: devcontainers/action@v1
         with:
-          templates-namespace: "devcontainer"
+          templates-namespace: "devcontainers"
           publish-templates: "true"
           base-path-to-templates: "./src"
         env:
