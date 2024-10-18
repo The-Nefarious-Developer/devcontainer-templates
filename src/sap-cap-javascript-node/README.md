@@ -1,5 +1,5 @@
 
-# SAP CAP (javascript-node)
+# SAP CAP (sap-cap-javascript-node)
 
 Develop CAP based projects for the SAP BTP Cloud Foundry runtime.
 
