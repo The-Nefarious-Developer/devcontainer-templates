@@ -6,16 +6,14 @@ on:
       - main
 
 permissions:
-  contents: write  # Ensure the GitHub Actions bot has write access
+  packages: write
+  contents: write
+  pull-requests: write
 
 jobs:
   deploy:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
-    permissions:
-      packages: write
-      contents: write
-      pull-requests: write
     steps:
       
       - uses: actions/checkout@v3
