@@ -1,5 +1,5 @@
 {
-    "id": "javascript-node",
+    "id": "sap-cap-javascript-node",
     "version": "1.0.0",
     "name": "SAP CAP",
     "description": "Develop CAP based projects for the SAP BTP Cloud Foundry runtime.",
