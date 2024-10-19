@@ -22,7 +22,6 @@ jobs:
         with:
           publish-templates: "true"
           base-path-to-templates: "./src"
-          generate-docs: "true"
         env:
           GITHUB_TOKEN: ${{ secrets.NEFARIOUS_TOKEN }}
         
