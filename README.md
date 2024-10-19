@@ -47,12 +47,12 @@ Each template needs to have a test implementation. The testing operations in thi
 
 ### Testing locally
 
-To test the images locally, the environment variable `VARIANT` need to be set prior to the bash file execution.
+To test the templates locally, the environment variable `VARIANT` need to be set prior to the bash file execution.
 
 Template for command to run the test locally:
 
 ```
-VARIANT=<upstream version> test/<image>/test.sh
+VARIANT=<upstream version> test/<template>/test.sh
 ```
 
 The [`package.json`](package.json) file contains an example of local testing through the script `test:local`.
@@ -61,10 +61,10 @@ The [`package.json`](package.json) file contains an example of local testing thr
 
 Contributions are welcome! Here's how you can get involved:
 
-1. **Report Issues:** Found a bug or have a feature request? [Open an issue](https://github.com/The-Nefarious-Developer/devcontainer-images/issues). <br />
+1. **Report Issues:** Found a bug or have a feature request? [Open an issue](https://github.com/The-Nefarious-Developer/devcontainer-templates/issues). <br />
 2. **Submit Pull Requests:** Fork the repository, create a new branch, make your changes, and submit a PR. <br />
 3. **Improve Documentation:** Help us improve the README or add examples to make setup easier. <br />
-4. **Test & Feedback:** Try the devcontainer images and give us feedback to improve them.
+4. **Test & Feedback:** Try the devcontainer template and give us feedback to improve them.
 
 Please follow the [contribution guidelines](CONTRIBUTING.md) for more details.
 
