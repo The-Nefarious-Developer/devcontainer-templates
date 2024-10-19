@@ -7,7 +7,7 @@
 
  This repository provides a set of ready-to-use devcontainer templates that you can integrate directly into your Visual Studio Code environment. These templates are particularly useful for SAP developers who want to set up a consistent development environment across different projects without hassle.
 
-> The docker containers published through this project can be found at the the [`devcontainer-images`](https://github.com/The-Nefarious-Developer/devcontainer-images) repository. 
+> The devcontainer templates created from this project make use of the Docker container images provided through the [`devcontainer-images`](https://github.com/The-Nefarious-Developer/devcontainer-images) repository. 
 
 ## Available Templates
 
