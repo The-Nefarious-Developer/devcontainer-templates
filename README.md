@@ -15,9 +15,9 @@ If you have any question, suggestion or request regarding what this repository c
 
 Ths repository generates the following devcontainer templates:
 
-| Template                  | Image                                                                                                                                                                            |
-|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| sap-cap-javascript-node   | [ghcr.io/the-nefarious-developer/sap-cap-javascript-node:{VERSION}](https://github.com/The-Nefarious-Developer/devcontainer-images/pkgs/container/sap-cap-javascript-node)   |
+| Template                  | Image                                                                                                                                                                      |
+|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| sap-cap-javascript-node   | [ghcr.io/the-nefarious-developer/sap-cap-javascript-node:{VERSION}](https://github.com/The-Nefarious-Developer/devcontainer-images/pkgs/container/sap-cap-javascript-node) |
 
 ## Content
 
