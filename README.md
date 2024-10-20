@@ -9,13 +9,15 @@
 
 > The devcontainer templates created from this project make use of the Docker container images provided through the [`devcontainer-images`](https://github.com/The-Nefarious-Developer/devcontainer-images) repository. 
 
+If you have any question, suggestion or request regarding what this repository can offer, you can use this [discussion area](https://github.com/orgs/The-Nefarious-Developer/discussions).
+
 ## Available Templates
 
 Ths repository generates the following devcontainer templates:
 
 | Template                  | Image                                                                                                                                                                            |
 |---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| sap-cap-javascript-node   | [ghcr.io/the-nefarious-developer/sap-cap-javascript-node:{VERSION TAG}](https://github.com/The-Nefarious-Developer/devcontainer-images/pkgs/container/sap-cap-javascript-node)   |
+| sap-cap-javascript-node   | [ghcr.io/the-nefarious-developer/sap-cap-javascript-node:{VERSION}](https://github.com/The-Nefarious-Developer/devcontainer-images/pkgs/container/sap-cap-javascript-node)   |
 
 ## Content
 
