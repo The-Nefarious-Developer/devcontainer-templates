@@ -1,0 +1,39 @@
+{
+    "id": "sap-cap-typescript-node",
+    "version": "1.0.0",
+    "name": "SAP CAP",
+    "description": "Develop CAP based projects with Typescript for SAP BTP Cloud Foundry.",
+    "documentationURL": "https://github.com/The-Nefarious-Developer/devcontainer-templates/tree/main/src/sap-cap-typescript-node",
+    "publisher": "The Nefarious Developer",
+    "licenseURL": "https://github.com/The-Nefarious-Developer/devcontainer-templates/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
+            "description": "Upstream Node version (use -bookworm, -bullseye variants on local arm64/Apple Silicon):",
+            "proposals": [
+                "22-bookworm",
+                "22-bullseye",
+                "20-bookworm",
+                "20-bullseye",
+                "18-bookworm",
+                "20-bullseye",
+                "18-bullseye"
+            ],
+            "default": "22-bookworm"
+        }
+    },
+    "platforms": [
+        "Node.js",
+        "JavaScript",
+        "TypeScript",
+        "SAP",
+        "BTP",
+        "CloudFoundry"
+    ],
+    "keywords": [
+        "SAP",
+        "CAP",
+        "BTP",
+        "CloudFoundry"
+    ]
+}
