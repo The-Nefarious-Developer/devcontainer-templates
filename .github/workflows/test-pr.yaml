@@ -15,6 +15,7 @@ jobs:
         with:
           filters: |
             sap-cap-javascript-node: ./**/sap-cap-javascript-node/**
+            sap-cap-typescript-node: ./**/sap-cap-typescript-node/**
 
   test:
     needs: [detect-changes]
